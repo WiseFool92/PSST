@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+
+@model PSST.Models.Treat
+
+<h2>
+  Add a book to this catalog:
+  @Html.DisplayFor(model => model.Name)
+</h2>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.TreatId)
+
+  @Html.Label("Select Flavor")
+  @Html.DropDownList("FlavorId")
+
+  <input class="btn" type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to Treats", "Index")</p>
