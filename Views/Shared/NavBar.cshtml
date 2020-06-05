@@ -7,16 +7,5 @@
     <li role="presentation" class="active"><a href="/">Home</a></li>
     <li>@Html.ActionLink("View Flavors", "Index", "Flavors")</li>
     <li>@Html.ActionLink("View Treats", "Index", "Treats")</li>
-    <li>@Html.ActionLink("Create an Account", "Index", "Account")</li>
-
-    @* <li role="presentation"><a href="/catalog">View Catalogs</a></li>
-    <li role="presentation"><a href='/book/new'>Add a Book</a></li> *@
-  </ul>
-
-  @* <form action="/search" method="get">
-  @Html.DropDownList("search",
-  new SelectList(Enum.GetNames(typeof(BookGenre))),
-  "Book Title", new { @class = "form-control"})
-  <br>
-  <input type="submit" value="Search Catalogs" class="btn">
-  </form> *@
+    <li>@Html.ActionLink("Account", "Index", "Account")</li>
+    <li>@Html.ActionLink("Public Display", "Index", "Display")</li>

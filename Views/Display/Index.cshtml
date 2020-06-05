@@ -1,0 +1,36 @@
+@{
+  Layout = "_Layout";
+}
+@model DisplayViewModel;
+
+<div class="center">
+<h2>Flavors</h2>
+  @if (Model.Any())
+  {
+    @foreach (Flavor flavor in Model)
+    {
+      <li>
+        @Html.ActionLink($"{flavor.Name}", "Details", new { id = flavor.FlavorId })
+      </li>
+    }
+  }
+  else
+  {
+    <h3>Flavors... Nien!</h3>
+  }
+  <hr>
+  <h2>Treats!</h2>
+  @if (Model.Any())
+  {
+    @foreach (Treat treat in Model)
+    {
+      <li>
+        @Html.ActionLink($"{treat.Name}", "Details", new { id = treat.TreatId })
+      </li>
+    } 
+  } 
+  else
+  {
+    <h3>Treats... Nien!</h3>
+  }
+</div>
