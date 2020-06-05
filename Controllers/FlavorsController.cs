@@ -58,6 +58,10 @@ namespace PSST.Controllers
       {
         return View(thisFlavor);
       }
+      else
+      {
+        return RedirectToAction("Index", "Home");
+      }
     }
 
     public async Task<ActionResult> Edit(int id)
@@ -69,7 +73,11 @@ namespace PSST.Controllers
         .FirstOrDefault(flavors => flavors.FlavorId == id);
       if (thisFlavor != null)
       {
-          return View(thisFlavor);
+        return View(thisFlavor);
+      }
+      else
+      {
+        return RedirectToAction("Index", "Home");
       }
     }
 
@@ -91,6 +99,10 @@ namespace PSST.Controllers
       if (thisFlavor != null)
       {
         return View(thisFlavor);
+      }
+      else
+      {
+        return RedirectToAction("Index", "Home");
       }
     }
 

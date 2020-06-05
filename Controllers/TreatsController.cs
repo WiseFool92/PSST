@@ -64,7 +64,11 @@ namespace PSST.Controllers
       if (thisTreat != null)
       {
         return View(thisTreat);
-      }  
+      }
+      else
+      {
+        return RedirectToAction("Index", "Home");
+      } 
     }
 
     public async Task<ActionResult> Edit(int id)
@@ -78,6 +82,10 @@ namespace PSST.Controllers
       if (thisTreat != null)
       {
         return View(thisTreat);
+      }
+      else
+      {
+        return RedirectToAction("Index", "Home");
       }
     }
 
@@ -103,6 +111,10 @@ namespace PSST.Controllers
       if (thisTreat != null)
       {
         return View(thisTreat);
+      }
+      else
+      {
+        return RedirectToAction("Index", "Home");
       }
     }
 
