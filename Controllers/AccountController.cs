@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
-using PSST.Models;
 using System.Threading.Tasks;
 using PSST.ViewModels;
+using PSST.Models;
 
 namespace PSST.Controllers
 {
