@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+@model PSST.Models.Treat
+
+<h2>Lez delete this?</h2>
+
+@Html.DisplayNameFor(model => model.Name):
+@Html.DisplayFor(model => model.Name)
+@using (Html.BeginForm())
+{
+  <input class="btn" type="submit" value="Delete" />
+}
+@Html.ActionLink("Back to Treats", "Index")

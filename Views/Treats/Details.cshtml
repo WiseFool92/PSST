@@ -1,0 +1,41 @@
+@{
+  Layout = "_Layout";
+}
+
+@model PSST.Models.Treat
+
+<h2>Treat Details</h2>
+<hr />
+<h3>
+  @Html.DisplayNameFor(model => model.Name):
+  @Html.DisplayFor(model => model.Name)
+</h3>
+<p>
+  @Html.DisplayNameFor(model => model.Description):
+  @Html.DisplayFor(model => model.Description)
+</p>
+
+@if(@Model.Flavors.Count == 0)
+{
+  <p>Flavorless Treat</p>
+}
+else
+{
+  <h4>Flavors the treat has:</h4>
+  <ul>
+  @foreach(var join in Model.Flavors)
+  {
+    <li>@join.Flavor.Name</li>
+    @using (Html.BeginForm("DeleteFlavor", "Treats"))
+    {
+      @Html.Hidden("joinId", @join.FlavorTreatId)
+      <input class="btn" type="submit" value="Delete"/>
+    }
+  }
+  </ul>
+}
+
+<p>@Html.ActionLink("Back to Treats", "Index")</p>
+<p>@Html.ActionLink("Edit Treat", "Edit", new { id = Model.TreatId })</p>
+<p>@Html.ActionLink("Add a Flavor", "AddFlavor", new { id = Model.TreatId })</p>
+<p>@Html.ActionLink("Delete Treat", "Delete", new { id = Model.TreatId })</p>
