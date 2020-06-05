@@ -1,10 +1,10 @@
-# _Library_
+# _Pierre's Sweets & Treats_
 
-#### June 2nd, 2020
+#### June 5nd, 2020
 
 ## Description
 
-_This application will allow the user to create a virtual library collection of books and allow users to view the stock & check them out_
+_This application will allow the user to create a virtual collection of Sweets & Treats. Logged in users will be able to create, edit, & delete products. Viewers / site visitors can view the stock & associated qualities of the products_
 
 _This application is meant to be viewed in the browser & will need a .NET Core Sdk 3.1 or 2.2 & ASP.Net 3.1 or 2.2 download as well as connect to a MySql Database_
 
@@ -92,29 +92,23 @@ dotnet ef database update
 ## Specs
 
 ### Behavior Driven Development Spec List
-#### Library
+#### Pierre's Sweets & Treats
 |                          Behavior                          | Input  | Output  |
 | :--------------------------------------------------------: | :----: | :-----: |
-| The libraian can create a book listing | 'Tao Te Ching' | 'Tao Te Ching' |
-| The librarian can view the listing | 'View Inventory' | 'Tao Te Ching' |
-| The librarian can update a listing | 'Tao Te Ching: English Publication 1868' | 'Tao Te Ching: English Publication 1868' |
-| The librarian can delete a book listing | 'Click delete next to Tao Te Ching' | 'Removed from list' |
-| The librarian can search for a book by author/title | 'Laozi' | 'Tao Te Ching' |
-| The librarian can add multiple authors to a single book | 'Good Omens By: Neil Gaiman & Terry Prachett' | 'Good Omens By: Neil Gaiman & Terry Prachett' |
-| The patron can check out a book | 'Selects Good Omens' | 'One copy of Good Omens reserved in inventory until it is returned' |
-| The patron can view the number of copies avaliable | 'Good Omens' | '2 copies' |
-| The patron can view their checkout history | 'Frank Dipetro's Account' | 'Tao Te Ching, Good Omens' |
-| The patron can view when the book is due back | 'Tao Te Ching' | '2 Days Overdue' |
-| The librarian can view a list of overdue books | 'Click Book list' | 'Tao Te Ching - 2 Days Overdue' |
+| The site allows account creation | 'Email & Password' | 'Account Created' |
+| The Authorized can create a flavor / treat listing | 'cheese danish' | 'cheese danish' |
+| The Authorized can update a flavor / treat listing | 'buttery' | 'buttery' |
+| The Authorized can delete a flavor / treat listing | 'Click delete' | 'Removed from list' |
+| Visitors can view the created listing | 'View Flavors or Treats' | 'List of flavors or treats' |
 
 ---
 ## Known Bugs
 
-_N/A_ - 6/2/2020
+_N/A_ - 6/5/2020
 
 ## gh-pages
 
-WiseFool92.github.io/Library
+WiseFool92.github.io/PSST
 
 ## Support
 
