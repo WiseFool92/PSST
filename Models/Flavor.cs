@@ -9,8 +9,14 @@ namespace PSST.Models
       this.Treats = new HashSet<FlavorTreat>();
     }
     public int FlavorId { get; set; }
-    public string Title { get; set; }
+
+    [StringLength(255)]
+    public string Name { get; set; }
+    
+    [StringLength(255)]
     public string Description { get; set; }
+
     public virtual ApplicationUser User { get; set; }
     public ICollection<FlavorTreat> Treats { get; }
   }
+}
