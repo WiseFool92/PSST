@@ -24,7 +24,7 @@ namespace PSST.Controllers
 
     public async Task<ActionResult> Index()
     {
-      var userId = this._userManager.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+      var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
       var currentUser = await _userManager.FindByIdAsync(userId);
       return View(_db.Flavors.Where(entry => entry.User.Id == currentUser.Id).ToList());
     }
