@@ -5,23 +5,22 @@
 @using PSST.Models;
 @* @model List<PSST.Models.Treat>; *@
 @model IEnumerable<PSST.Models.Treat>
-
-<h2>Treats!, @User.Identity.Name</h2>
-@if (Model.Any())
-{
-  <ul>
+<div class="center">
+  <h2>Treats!</h2>
+  @if (Model.Any())
+  {
     @foreach (Treat treat in Model)
     {
       <li>
         @Html.ActionLink($"{treat.Name}", "Details", new { id = treat.TreatId })
       </li>
-    }
-  </ul>
-} 
-else
-{
-  <h3>Treats... Nien!</h3>
-}
-
-<p>@Html.ActionLink("Add new Treat", "Create")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+    } 
+  } 
+  else
+  {
+    <h3>Treats... Nien!</h3>
+  }
+  <hr>
+  <p>@Html.ActionLink("Add new Treat", "Create")</p>
+  <p>@Html.ActionLink("Home", "Index", "Home")</p>
+</div>
