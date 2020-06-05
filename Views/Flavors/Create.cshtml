@@ -5,10 +5,13 @@
 @model PSST.Models.Flavor
 
 <h4>Add a new flavor</h4>
+
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)<hr>
+  @Html.LabelFor(model => model.Description)
+  @Html.TextBoxFor(model => model.Description)<hr>
   <input class="btn" type="submit" value="Add new flavor" />
 }
 <p>@Html.ActionLink("Show all Flavors", "Index")</p>
